@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABF129FD27FDB88E002970F4 /* NanaChallengePRO_fitterolaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF129FC27FDB88E002970F4 /* NanaChallengePRO_fitterolaApp.swift */; };
+		ABF12A0427FDB890002970F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF12A0327FDB890002970F4 /* Preview Assets.xcassets */; };
+		ABF12A1327FDB8CB002970F4 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF12A0A27FDB8CB002970F4 /* GameLogic.swift */; };
+		ABF12A1427FDB8CB002970F4 /* Background.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ABF12A0B27FDB8CB002970F4 /* Background.atlas */; };
+		ABF12A1527FDB8CB002970F4 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF12A0C27FDB8CB002970F4 /* ButtonView.swift */; };
+		ABF12A1627FDB8CB002970F4 /* GameScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF12A0D27FDB8CB002970F4 /* GameScoreView.swift */; };
+		ABF12A1727FDB8CB002970F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF12A0E27FDB8CB002970F4 /* Assets.xcassets */; };
+		ABF12A1827FDB8CB002970F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF12A0F27FDB8CB002970F4 /* ContentView.swift */; };
+		ABF12A1A27FDB8CB002970F4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF12A1127FDB8CB002970F4 /* GameView.swift */; };
+		ABF12A1B27FDB8CB002970F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF12A1227FDB8CB002970F4 /* LaunchScreen.storyboard */; };
+		ABF12A1F27FDB9A5002970F4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF12A1E27FDB9A5002970F4 /* GameScene.swift */; };
+		ABF5F57927FDBEA4005E31AB /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5F57827FDBEA4005E31AB /* PhysicsCategory.swift */; };
+		ABF5F57B27FE1199005E31AB /* edgygerie.wav in Resources */ = {isa = PBXBuildFile; fileRef = ABF5F57A27FE1199005E31AB /* edgygerie.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABF129F927FDB88E002970F4 /* Gerie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gerie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF129FC27FDB88E002970F4 /* NanaChallengePRO_fitterolaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanaChallengePRO_fitterolaApp.swift; sourceTree = "<group>"; };
+		ABF12A0327FDB890002970F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABF12A0A27FDB8CB002970F4 /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		ABF12A0B27FDB8CB002970F4 /* Background.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Background.atlas; sourceTree = "<group>"; };
+		ABF12A0C27FDB8CB002970F4 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		ABF12A0D27FDB8CB002970F4 /* GameScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScoreView.swift; sourceTree = "<group>"; };
+		ABF12A0E27FDB8CB002970F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABF12A0F27FDB8CB002970F4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABF12A1127FDB8CB002970F4 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		ABF12A1227FDB8CB002970F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABF12A1E27FDB9A5002970F4 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		ABF5F57827FDBEA4005E31AB /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
+		ABF5F57A27FE1199005E31AB /* edgygerie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = edgygerie.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABF129F627FDB88E002970F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABF129F027FDB88E002970F4 = {
+			isa = PBXGroup;
+			children = (
+				ABF129FB27FDB88E002970F4 /* NanaChallengePRO-fitterola */,
+				ABF129FA27FDB88E002970F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABF129FA27FDB88E002970F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABF129F927FDB88E002970F4 /* Gerie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABF129FB27FDB88E002970F4 /* NanaChallengePRO-fitterola */ = {
+			isa = PBXGroup;
+			children = (
+				ABF129FC27FDB88E002970F4 /* NanaChallengePRO_fitterolaApp.swift */,
+				ABF12A0F27FDB8CB002970F4 /* ContentView.swift */,
+				ABF12A0B27FDB8CB002970F4 /* Background.atlas */,
+				ABF12A1127FDB8CB002970F4 /* GameView.swift */,
+				ABF12A1E27FDB9A5002970F4 /* GameScene.swift */,
+				ABF5F57827FDBEA4005E31AB /* PhysicsCategory.swift */,
+				ABF12A0A27FDB8CB002970F4 /* GameLogic.swift */,
+				ABF12A0D27FDB8CB002970F4 /* GameScoreView.swift */,
+				ABF12A0C27FDB8CB002970F4 /* ButtonView.swift */,
+				ABF12A1227FDB8CB002970F4 /* LaunchScreen.storyboard */,
+				ABF12A0E27FDB8CB002970F4 /* Assets.xcassets */,
+				ABF5F57A27FE1199005E31AB /* edgygerie.wav */,
+				ABF12A0227FDB890002970F4 /* Preview Content */,
+			);
+			path = "NanaChallengePRO-fitterola";
+			sourceTree = "<group>";
+		};
+		ABF12A0227FDB890002970F4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ABF12A0327FDB890002970F4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABF129F827FDB88E002970F4 /* NanaChallengePRO-fitterola */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF12A0727FDB890002970F4 /* Build configuration list for PBXNativeTarget "NanaChallengePRO-fitterola" */;
+			buildPhases = (
+				ABF129F527FDB88E002970F4 /* Sources */,
+				ABF129F627FDB88E002970F4 /* Frameworks */,
+				ABF129F727FDB88E002970F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NanaChallengePRO-fitterola";
+			productName = "NanaChallengePRO-fitterola";
+			productReference = ABF129F927FDB88E002970F4 /* Gerie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABF129F127FDB88E002970F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					ABF129F827FDB88E002970F4 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = ABF129F427FDB88E002970F4 /* Build configuration list for PBXProject "NanaChallengePRO-fitterola" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABF129F027FDB88E002970F4;
+			productRefGroup = ABF129FA27FDB88E002970F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABF129F827FDB88E002970F4 /* NanaChallengePRO-fitterola */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABF129F727FDB88E002970F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF12A0427FDB890002970F4 /* Preview Assets.xcassets in Resources */,
+				ABF12A1B27FDB8CB002970F4 /* LaunchScreen.storyboard in Resources */,
+				ABF12A1727FDB8CB002970F4 /* Assets.xcassets in Resources */,
+				ABF5F57B27FE1199005E31AB /* edgygerie.wav in Resources */,
+				ABF12A1427FDB8CB002970F4 /* Background.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABF129F527FDB88E002970F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF12A1327FDB8CB002970F4 /* GameLogic.swift in Sources */,
+				ABF5F57927FDBEA4005E31AB /* PhysicsCategory.swift in Sources */,
+				ABF12A1827FDB8CB002970F4 /* ContentView.swift in Sources */,
+				ABF129FD27FDB88E002970F4 /* NanaChallengePRO_fitterolaApp.swift in Sources */,
+				ABF12A1527FDB8CB002970F4 /* ButtonView.swift in Sources */,
+				ABF12A1627FDB8CB002970F4 /* GameScoreView.swift in Sources */,
+				ABF12A1F27FDB9A5002970F4 /* GameScene.swift in Sources */,
+				ABF12A1A27FDB8CB002970F4 /* GameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ABF12A0527FDB890002970F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABF12A0627FDB890002970F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABF12A0827FDB890002970F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NanaChallengePRO-fitterola/Preview Content\"";
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.NanaChallengePRO-fitterola";
+				PRODUCT_NAME = Gerie;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		ABF12A0927FDB890002970F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NanaChallengePRO-fitterola/Preview Content\"";
+				DEVELOPMENT_TEAM = XEW3LDVT97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Francesco-Monaco.NanaChallengePRO-fitterola";
+				PRODUCT_NAME = Gerie;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABF129F427FDB88E002970F4 /* Build configuration list for PBXProject "NanaChallengePRO-fitterola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF12A0527FDB890002970F4 /* Debug */,
+				ABF12A0627FDB890002970F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABF12A0727FDB890002970F4 /* Build configuration list for PBXNativeTarget "NanaChallengePRO-fitterola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF12A0827FDB890002970F4 /* Debug */,
+				ABF12A0927FDB890002970F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABF129F127FDB88E002970F4 /* Project object */;
+}
