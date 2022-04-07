@@ -28,10 +28,9 @@ struct GameView: View {
         ZStack() {
             // View that presents the game scene
             SpriteView(scene: self.gameScene)
-                //.frame(width: screenWidth, height: screenHeight)
-                .frame(width: 850, height: 420, alignment: .center)
+                .frame(width: screenWidth, height: screenHeight+30, alignment: .center) //850, 420
                 .ignoresSafeArea()
-                //.statusBar(hidden: true)
+                .statusBar(hidden: true)
                 .zIndex(-1)
                             
             
@@ -62,9 +61,9 @@ struct GameView: View {
                 }
             }
         }
-       /* .onAppear {
+        .onAppear {
             gameLogic.restartGame()
-        } */
+        }
     }
 }
 

@@ -13,13 +13,13 @@ class GameScene: SKScene {
     
     @StateObject var gameLogic: GameLogic = GameLogic.shared
     
-    private var alert: Bool = false
     private var background = SKSpriteNode()
     private var backgroundFrames: [SKTexture] = []
     private var housekeeper = SKSpriteNode()
     private var gnome = SKSpriteNode()
     private var button = SKSpriteNode()
-    private var isVisible = true
+    private var gameOverLogo = SKSpriteNode()
+    private var restartButton = SKSpriteNode()
     
     private var isMovingToTheRight: Bool = false
     private var isMovingToTheLeft: Bool = false
@@ -42,6 +42,8 @@ class GameScene: SKScene {
         buildHousekeeper()
         buildCestellino()
         buildButton()
+        buildGameOverLogo()
+        buildRestartButton()
         
         if !gameLogic.isGameOver {
             moveHousekeeper()
@@ -80,7 +82,21 @@ class GameScene: SKScene {
                 button.texture = SKTexture(imageNamed: "ButtonPressed")
                 gnome.texture = SKTexture(imageNamed: "gnome2")
                 self.isMovingToTheRight = false
-                gameLogic.currentScore += 1
+                if gnome.position.x > 500  && gnome.position.x < 600 {
+                    gameLogic.currentScore += 1
+                }
+            }
+        }
+        
+        for touch in touches {
+            let location = touch.location(in: self)
+            let node : SKNode = self.atPoint(location)
+            if node.name == "restartButton" {
+                gameOverLogo.alpha = 0
+                restartButton.alpha = 0
+                gnome.position = CGPoint(x: 150, y: 50)
+                housekeeper.texture = SKTexture(imageNamed: "housekeeper1")
+                gameLogic.restartGame()
             }
         }
         
@@ -95,21 +111,17 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         
-        /*  if self.isGameOver { self.finishGame() }
-         
-         if self.lastUpdate == 0 { self.lastUpdate = currentTime }
-         
-         let timeElapsedSinceLastUpdate = currentTime - self.lastUpdate
-         self.gameLogic.increaseSessionTime(by: timeElapsedSinceLastUpdate)
-         
-         self.lastUpdate = currentTime */
-        
         if isMovingToTheRight && (self.gnome.position.x > 0) {
             self.moveRight()
         }
         
         if isMovingToTheLeft && (self.gnome.position.x < frame.width) {
             self.moveLeft()
+        }
+        
+        if gameLogic.isGameOver {
+            isMovingToTheRight = false
+            isMovingToTheLeft = false
         }
         
         // BOUNDARIES FOR THE PLAYER
@@ -121,6 +133,20 @@ class GameScene: SKScene {
         if gnome.position.x > frame.maxX - gnome.size.width/2 {
             gnome.position.x = frame.maxX - gnome.size.width/2
           }
+        
+        // GAME OVER CONDITIONS
+        
+        if gnome.position.x > 330 && housekeeper.xScale == 1{
+            housekeeper.texture = SKTexture(imageNamed: "housekeeper2")
+            gameLogic.isGameOver = true
+            DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                self.gameOverLogo.alpha = 1
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+                self.restartButton.alpha = 1
+            }
+            
+        }
         
     }
     
@@ -136,6 +162,25 @@ class GameScene: SKScene {
         
     }
     
+    func buildRestartButton() {
+        restartButton = SKSpriteNode(imageNamed: "restart")
+        restartButton.name = "restartButton"
+        restartButton.size = CGSize(width: 50, height: 50)
+        restartButton.position = CGPoint(x: frame.midX, y: frame.midY-110)
+        restartButton.zPosition = 5
+        restartButton.alpha = 0
+        addChild(restartButton)
+    }
+    
+    func buildGameOverLogo() { 
+        gameOverLogo = SKSpriteNode(imageNamed: "gameOver")
+        gameOverLogo.size = CGSize(width: 350, height: 180)
+        gameOverLogo.position = CGPoint(x: frame.midX, y: frame.midY)
+        gameOverLogo.zPosition = 5
+        gameOverLogo.alpha = 0
+        addChild(gameOverLogo)
+    }
+    
     func buildButton() {
         let button = SKSpriteNode(imageNamed: "Button")
         button.size = CGSize(width: 100, height: 100)
@@ -146,8 +191,8 @@ class GameScene: SKScene {
     }
     
     func moveHousekeeper() {
-        let action1 = SKAction.move(to: CGPoint(x: 560, y: 140), duration: 5)
-        let action2 = SKAction.move(to: CGPoint(x: 600, y: 190), duration: 5)
+        let action1 = SKAction.move(to: CGPoint(x: 560, y: 140), duration: 3)
+        let action2 = SKAction.move(to: CGPoint(x: 600, y: 190), duration: 3)
         
         housekeeper.run(action1)
         DispatchQueue.main.asyncAfter(deadline: .now()+7) {
@@ -187,6 +232,30 @@ class GameScene: SKScene {
             self.housekeeper.run(action2)
         }
         DispatchQueue.main.asyncAfter(deadline: .now()+70) {
+            self.housekeeper.xScale = 1
+            self.housekeeper.run(action1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+77) {
+            self.housekeeper.xScale = 1
+            self.housekeeper.run(action1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+84) {
+            self.housekeeper.xScale = 1
+            self.housekeeper.run(action1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+91) {
+            self.housekeeper.xScale = 1
+            self.housekeeper.run(action1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+98) {
+            self.housekeeper.xScale = 1
+            self.housekeeper.run(action1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+105) {
+            self.housekeeper.xScale = 1
+            self.housekeeper.run(action1)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+112) {
             self.housekeeper.xScale = 1
             self.housekeeper.run(action1)
         }
@@ -251,9 +320,6 @@ class GameScene: SKScene {
         gnome.physicsBody?.affectedByGravity = false
         gnome.physicsBody?.isDynamic = false
         
-        /* let xRange = SKRange(lowerLimit: 0, upperLimit: frame.width)
-         let xConstraint = SKConstraint.positionX(xRange)
-         self.gnome.constraints = [xConstraint] */
         
         addChild(gnome)
     }
@@ -288,24 +354,3 @@ class GameScene: SKScene {
     
 }
 
-//MARK: - Collision
-
-extension GameScene: SKPhysicsContactDelegate {
-    
-    func didBegin(_ contact: SKPhysicsContact) {
-        var firstBody = SKPhysicsBody()
-        var secondBody = SKPhysicsBody()
-        
-        if contact.bodyA.node?.name == "gnome" {
-            firstBody = contact.bodyA
-            secondBody = contact.bodyB
-        } else {
-            firstBody = contact.bodyB
-            secondBody = contact.bodyA
-        }
-        
-        if firstBody.node?.name == "gnome" && secondBody.node?.name == "cestellino" {
-            print("CONTACT")
-       }
-    }
-}
