@@ -9,7 +9,15 @@ import SpriteKit
 import SwiftUI
 
 
+enum GameState {
+    case playing
+    case gameover
+}
+
+
 class GameScene: SKScene {
+    
+    var gameState = GameState.playing
     
     @StateObject var gameLogic: GameLogic = GameLogic.shared
     
@@ -33,7 +41,7 @@ class GameScene: SKScene {
             addChild(backgroundMusic)
         }
         
-        gameLogic.setUpGame()
+        //gameLogic.setUpGame()
         buildUnderpantsPile()
         buildSecondUnderpantsPile()
         buildBackground()
@@ -67,14 +75,19 @@ class GameScene: SKScene {
         guard let touch = touches.first else { return }
         let touchLocation = touch.location(in: self)
         
-        
-        switch sideTouched(for: touchLocation) {
-        case .right:
-            self.isMovingToTheRight = true
-        case .left:
-            self.isMovingToTheLeft = true
+        switch gameState {
+        case .playing:
+            switch sideTouched(for: touchLocation) {
+            case .right:
+                self.isMovingToTheRight = true
+            case .left:
+                self.isMovingToTheLeft = true
+            }
+        case .gameover:
+            break
         }
         
+        // INCREASING SCORE WHILE CLOSE TO THE BASKET
         for touch in touches {
             let location = touch.location(in: self)
             let node : SKNode = self.atPoint(location)
@@ -96,6 +109,7 @@ class GameScene: SKScene {
                 restartButton.alpha = 0
                 gnome.position = CGPoint(x: 150, y: 50)
                 housekeeper.texture = SKTexture(imageNamed: "housekeeper1")
+                gameState = .playing
                 gameLogic.restartGame()
             }
         }
@@ -119,10 +133,11 @@ class GameScene: SKScene {
             self.moveLeft()
         }
         
-        if gameLogic.isGameOver {
+        if gameState == .gameover {
             isMovingToTheRight = false
             isMovingToTheLeft = false
         }
+        
         
         // BOUNDARIES FOR THE PLAYER
         
@@ -138,7 +153,8 @@ class GameScene: SKScene {
         
         if gnome.position.x > 330 && housekeeper.xScale == 1{
             housekeeper.texture = SKTexture(imageNamed: "housekeeper2")
-            gameLogic.isGameOver = true
+            //gameLogic.isGameOver = true
+            gameState = .gameover
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                 self.gameOverLogo.alpha = 1
             }
